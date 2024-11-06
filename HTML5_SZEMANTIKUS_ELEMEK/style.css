@@ -1,0 +1,90 @@
+body {
+    background-color: burlywood;
+}
+
+header, nav, article, aside, footer {
+    border: 1px solid gray;
+    padding: 10px;
+}
+
+
+
+
+
+main {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    grid-template-areas:
+        "h h"
+        "n n"
+        "a as"
+        "f f";
+}
+
+header {
+    grid-area: h;
+}
+
+nav {
+    grid-area: n;
+}
+
+article {
+    grid-area: a;
+}
+
+aside {
+    grid-area: as;
+}
+
+footer {
+    grid-area: f;
+}
+
+
+
+
+
+article {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+}
+
+nav ul {
+    display: grid;
+    grid-template-columns: 200px 1fr 1fr;
+}
+
+li {
+    list-style-type: none;
+}
+
+a {
+    text-decoration: none;
+    color: brown;
+}
+
+footer {
+    text-align: center;
+}
+
+
+
+
+
+@media screen and (max-width: 800px) {
+    main {
+        grid-template-columns: 1fr;
+        grid-template-areas:
+        "h "
+        "n "
+        "as "
+        "a "
+        "f ";
+    }
+
+    article {
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+    }
+}
